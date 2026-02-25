@@ -1,0 +1,85 @@
+<!DOCTYPE html><!--header file of the html document-->
+<html lang="en"><!--grouping of the head and body of the document-->
+<head><!--head section of Html-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jAVASCRIPT VALIDATION</title><!--title of the document-->
+
+    <!-- javascript validation for email and password -->
+    <script>
+        function javascript_validation(){//function to validate the form
+            const password = document.forms["MyForm"]["ValidatePassword"].value;//take the value of the password field
+            const email = document.forms["MyForm"]["ValidateEmail"].value;//take the value of the email field
+            ///validation for email and password by use Conditional statements
+            if(email.length < 8){alert("Email must be at least 8 characters Long");return false;}
+                if(!email.match(/[A-Z]/)){
+                    alert("Email must contain at least one uppercase letter");
+                        return false;
+                        }
+                        if(!email.match(/[a-z]/)){
+                            alert("Email must contain at least one lowercase letter");
+                                return false;
+                                }
+                                if(!email.match(/[0-9]/)){
+                                alert("Email must contain at least one number");
+                            return false;
+                            }
+                        if(!email.includes("@")){
+                        alert("Please enter @ valid email address");
+                    return false;
+                    }
+            if(!email.includes(".com")){alert("Please enter .com valid email address");return false;}
+            if(password.length < 8){alert("Password must be at least 8 characters Long");return false;}
+                if(!password.match(/[A-Z]/)){
+                    alert("Password must contain at least one uppercase letter");
+                        return false;
+                        }
+                            if(!password.match(/[a-z]/)){
+                                alert("Password must contain at least one lowercase letter");
+                                    return false;
+                                    }
+                                    if(!password.match(/[0-9]/)){
+                                        alert("Password must contain at least one number");
+                                            return false;
+                                            }
+                                    if(!password.match(/[@$!%*?&]/)){
+                                alert("Password must contain at least one special character");
+                                return false;
+                                }
+                    alert("Form submitted successfully!");
+            return true;
+        }
+        //function to toggle the password visibility
+         function togglePassword() {
+            const checkBox = document.getElementById("password");//look for the password field
+            if(checkBox.type ==="password"){//if the type of the password field is password then change it to text
+                checkBox.type = "text";
+            } else{//if the type of the password field is text then change it to password
+                checkBox.type = "password";
+            }
+         }
+        //         function togglePassword() {
+        //         const passInput = document.getElementById("password");
+        //         if (passInput.type === "password") {
+        //             passInput.type = "text";
+        //         } else {
+        //             passInput.type = "password";
+        //         }
+        // }
+    </script>
+</head>
+<body>
+        <h1>JavaScript Validation</h1>
+        <form action="/action_page.php" method="post" name="MyForm" onsubmit="return javascript_validation()" >
+            <label for="email" name="TakeEmail">Email:</label>
+            <input type="email" name="ValidateEmail" id="email" required>
+            <br>
+            <label for="password" name="TakePassowrd">Password:</label>
+            <input type="password" name="ValidatePassword"id="password" required>
+            <input type="checkbox" name="ShowPassword" id="checkbox" onclick="togglePassword()"> Show Password
+            <br>
+            <input type="submit" value="Enter">
+            <button type="submit">Submit</button>
+        </form>
+</body>
+</html>

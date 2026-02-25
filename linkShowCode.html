@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Explorer</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        
+        /* The Note Box where code will appear */
+        #codeNote {
+            width: 90%;
+            height: 300px;
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-left: 10px solid #333; /* Makes it look like a notebook */
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre; /* Keeps code formatting */
+            overflow: auto;
+            font-family: 'Courier New', monospace;
+            display: none; /* Hidden until clicked */
+        }
+
+        .file-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Project Form</h2>
+    <form>
+        Password: <input type="password" id="pass">
+        <br><br>
+        <input type="button" value="Submit" onclick="alert('Form Submitted')">
+    </form>
+
+    <hr>
+
+    <h3>Click to see File Code:</h3>
+    <span class="file-link" onclick="viewFile('index.html')">index.html</span>
+    <span class="file-link" onclick="viewFile('style.css')">style.css</span>
+    <span class="file-link" onclick="viewFile('script.js')">script.js</span>
+
+    <div id="codeNote"></div>
+
+    <script>
+        function viewFile(fileName) {
+            const note = document.getElementById('codeNote');
+            
+            // FETCH the real code from your file
+            fetch(fileName)
+                .then(response => {
+                    if (!response.ok) throw new Error("File not found");
+                    return response.text();
+                })
+                .then(content => {
+                    note.textContent = content; // Put code in the note
+                    note.style.display = "block"; // Show the note
+                })
+                .catch(err => {
+                    note.textContent = "Could not load " + fileName + ". Make sure you are using a Live Server.";
+                    note.style.display = "block";
+                });
+        }
+    </script>
+
+</body>
+</html>

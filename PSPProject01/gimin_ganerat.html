@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <body class="bg-black text-white flex flex-col min-h-screen">
+    <div class="hidden md:flex justify-center w-full bg-gray-900">
+        <div class="flex flex-row w-full max-w-6xl justify-between items-center p-7">
+            <h1 class="header_font text-blue-600 font-bold text-6xl">PSP.DE</h1>
+            
+            <div class="flex items-center gap-4">
+                <form action="">
+                    <input class="w-50 h-10 border-2 border-gray-600 rounded-xl bg-gray-900 px-4 focus:w-60 transition-all" type="text" placeholder="search">
+                </form>
+                <button type="submit" class="text-blue-800 font-bold text-2xl">submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:hidden flex justify-center bg-gray-900 p-3">
+        <div class="w-full flex justify-between items-center px-4">
+            <h1 class="header_font text-blue-600 font-bold text-2xl">PSP.DE</h1>
+            <button type="submit" class="text-blue-800 font-bold">submit</button>
+        </div>
+    </div>
+
+    <nav class="w-full">
+        <div class="flex flex-col w-full items-center"> 
+            <div class="w-full hidden md:flex bg-gray-700 justify-center sticky top-0 z-50">
+                <ul class="flex gap-x-10 p-3">
+                    <li><a class="hover:text-blue-600" href="html01.html">Home</a></li>
+                    <li><a class="hover:text-blue-600" href="html02.html">About</a></li>
+                    <li><a class="hover:text-blue-600" href="html03.html">History</a></li>
+                    <li><a class="hover:text-blue-600" href="html04.html">Experience</a></li>
+                </ul>
+            </div>
+
+            <main class="p-5 w-full max-w-6xl flex flex-col md:flex-row justify-center items-center gap-10 mt-10">
+                <div class="text-center md:text-left text-3xl md:text-7xl text-blue-900 font-semibold font-serif">
+                    <h1>So PHEAK PhY <br> Portfolio</h1>
+                </div>
+
+                <div class="relative flex justify-center items-center">
+                    <div class="w-40 h-40 lg:w-80 lg:h-80 rounded-full shadow-lg shadow-blue-900/100 overflow-hidden">
+                        <img class="h-full w-full object-cover" src="../Image/wPf.jpg" alt="Logo">
+                    </div>
+                    
+                    <div class="absolute -right-10 flex flex-col gap-2">
+                        <button onclick="chang_bg_light()" class="p-2 hover:bg-blue-600 rounded-full transition-all"><i class="fa-solid fa-moon"></i></button>
+                        <button onclick="chang_bg_dark()" class="p-2 hover:bg-blue-600 rounded-full text-gray-400"><i class="fa-solid fa-sun"></i></button>
+                    </div>
+                </div>
+            </main>
+
+            <footer id="icon" class="w-full max-w-6xl mt-20 p-9">
+                <div class="flex flex-row items-center justify-center gap-6 text-2xl">
+                    <a href="#"><i class="bg-blue-700 p-2 rounded-sm fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="bg-red-700 p-2 rounded-sm fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="bg-red-900 p-2 rounded-sm fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="bg-green-700 p-2 rounded-sm fa-brands fa-twitter"></i></a>
+                </div>
+            </footer>
+        </div>
+    </nav>
+</body>
+    
+    <script src="js.js"></script>
+</body>
+</html>

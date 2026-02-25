@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Gravitas+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@layer components{
+    .fredericka-the-great-regular {
+  font-family: "Fredericka the Great", serif;
+  font-weight: 100;
+  font-style: bold;
+  font-style: italic;
+  color: rgb(31, 83, 174);
+}
+}
+/* @layer components{
+    .bg{
+        background-image: url("view.png");
+        max-height: 700px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    
+    }
+} */
+@layer base{
+    .image{
+        
+        background-image: url("Image/head_bourn.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover ;
+    }
+}
+@layer base{
+    .family{
+        background-image: url("../Image/wPf.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+@layer base{
+    .header_font{
+          font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-style: italic;
+            word-spacing: 20px;
+    }
+
+}
+@layer base{
+    .height{
+        line-height: 50px;
+    }
+}
+
+@layer components{
+    .image_indexFile{
+        background-image: url("../Image/javascriptLogo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

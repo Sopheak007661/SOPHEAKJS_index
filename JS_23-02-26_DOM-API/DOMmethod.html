@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM-API-26-02</title>
+  <script src="DOMmethod.js"></script>
+  <link rel="stylesheet" href="../output.css" />
+</head>
+
+<body class="p-5 h-max-screen flex flex-col items-center gap-20">
+  <div class="flex justify-center border-b-3 w-full border-amber-400">
+    <h1
+      class="text-xl font-bold font-mono text-green-100 w-40 h-10 flex justify-center rounded-2xl items-center shadow-blue-950 shadow-xl border-4 border-blue-900 bg-blue-500">
+      Vedio SOng
+    </h1>
+  </div>
+
+  <video autoplay loop controls muted class="w-lg h-lg rounded-2xl rounded-t-2xl bg-blue-200" id="my-video-mp4">
+    <source src="../Image/Caton1.mp4" type="video/mp4" />
+  </video>
+  <script>
+    document.write("this is writing directly text");
+  </script>
+  <h2 id="pi">Showing Date</h2>
+  <div class="grid-1 ms:grid-col-2 md:grid-col-3 lg:grid-col-4 xl:grid-col-5 gap-10">
+    <button class="bg-pink-500 p-2 rounded-xl font-semibold text-xl" onclick="chang_video()">
+      Chang-Music
+    </button>
+    <button class="bg-blue-600 rounded-2xl p-2 text-xl font-sans font-bold" onclick="show_date()">
+      Date
+    </button>
+    <button class="bg-blue-200 rounded-2xl p-2 text-xl font-sans font-bold" onclick="document.write('Hello Writing')">
+      Date
+    </button>
+    <button class="bg-blue-900 rounded-2xl p-2 text-xl font-sans font-bold" onclick="print_page()">
+      print
+    </button>
+    <button class="bg-red-900 rounded-2xl p-2 text-xl font-sans font-bold" onclick="Change_Style()">
+      ChangSizeVideo
+    </button>
+    <button class="bg-red-500 rounded-2xl p-2 text-xl font-sans font-bold" onclick="show_video()">
+      ShowVideo
+    </button>
+    <button class="bg-red-500 rounded-2xl p-2 text-xl font-sans font-bold" onclick="hide_video()">
+      HiddenVideo
+    </button>
+  </div>
+  <form action=""></form>
+</body>
+
+</html>

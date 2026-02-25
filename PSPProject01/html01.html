@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="output.css"> -->
+</head>
+
+<body>
+    <div class="flex  flex-row justify-center items-center w-full h-130">
+        <h1 class=" text-blue-400 font-sans font-bold text-6xl ">Pag 1 WelCOME</h1>
+    </div>
+    <p id="demo"></p>
+    <p id="h1"></p>
+    <h1 id="obj_con"></h1>
+    <h1 id="hoisting"></h1>
+    <script>
+        {
+            let x = 10;
+            let y = 100;
+            let areal = x * y;
+            document.getElementById("demo").innerHTML = "Areal is " + areal;
+            
+        }
+        {
+            //using the object methond
+            const Fnt = {
+                name: "PSP",
+                age: 12,
+                show_data: function () {
+                    return this.name +""+ this.age;
+                }
+            };
+            document.getElementById("h1").innerHTML = Fnt.show_data();
+        }
+        {
+            //using the object constructor
+            //step1 : make the function by have parameter
+            function Data(name,age,grade)
+            {
+            //step2 : make the constructor in this function
+                this.Name=name;
+                this.Age=age;
+                this.Grade=grade;
+            }
+            //step3:make a object to make data by take variable from function
+            const Student= new Data("Sopheak",20,2);
+            //output
+            document.getElementById("obj_con").innerHTML=Student.Name
+        }
+        {
+    // how to hosting 
+    let a ;
+    a=5;
+    let Variable = document.getElementById("hoisting");
+        Variable.innerHTML=a+"  is the value is so Cute.";
+        }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Source Code Viewer</title>
+    <style>
+        /* Styling the code box to look like an editor */
+        #codeDisplay {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 15px;
+            display: none; /* Hidden by default */
+            white-space: pre-wrap;
+            font-family: monospace;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Website</h1>
+    <button onclick="showSource()">View Page Source Code</button>
+
+    <pre id="codeDisplay"></pre>
+
+    <script>
+        function showSource() {
+            // 1. Get the entire HTML of the current page
+            // .documentElement.innerHTML gets everything inside <html> tags
+            let source = document.documentElement.innerHTML;
+
+            // 2. Select the display box
+            let displayBox = document.getElementById("codeDisplay");
+
+            // 3. Put the source code inside (using textContent to avoid it running as HTML)
+            displayBox.textContent = "<html>\n" + source + "\n</html>";
+
+            // 4. Toggle visibility
+            if (displayBox.style.display === "none") {
+                displayBox.style.display = "block";
+            } else {
+                displayBox.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
