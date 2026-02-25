@@ -15,47 +15,52 @@
     </style> -->
 </head>
 
-<body class="font-mono flex justify-center gap-3 min-h-screen text-[6px] lg:text-[20px] m-0 bg-black text-blue-600 p-0">
-    <div class="flex justify-center max-h-screen min-h-60 max-w-screen-1lg gap-2 mt-5 bg-blue-300 p-3 h-full">
-            <div class=" sidebar   bg-gray-900 flex-col gap-2 justify-stat items-start max-h-1lg ">
-                <h3>FILES</h3>
-
-                <div class="file-link" onclick="loadFile('CheckCode1.html')">📄 CodeWrite thisPage.html</div>
-                <div class="file-link" onclick="loadFile('index.html')">index.html</div>
-                <div class="file-link" onclick="loadFile('input.css')">input.css</div>
-                <div class="file-link" onclick="loadFile('output.css')">output.css</div>
-                <div class="file-link" onclick="loadFile('Itself_Code.html')">ItSelfCode.html</div>
-                <div class="file-link" onclick="loadFile('linkShowCode.html')">linkShowCode.html</div>
-                <div class="file-link" onclick="loadFile('jsYouTueCode.js')">jsYouTueCode.js</div>
-                <div class="file-link" onclick="loadFile('codeValidateFromYutube.html')">codeValidateFromYutube.html
-                </div>
-                <div class="file-link" onclick="loadFile('image.html')">🖼️ Image.html</div>
-
-                <div class="folder-name">📁 PSPProject01</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/Project1.js')">Project1.js</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/gimin_ganerat.html')">gimin_ganerat.html</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/html01.html')">html01.html</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/html02.html')">html02.html</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/html03.html')">html03.html</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/html04.html')">html04.html</div>
-                <div class="file-link" onclick="loadFile('PSPProject01/Project1.html')">Project1.html</div>
-                <div class="folder-name">📁 JS_23-02-26_DOM-API</div>
-                <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/DOMmethod.js')">DOMmethod.js</div>
-                <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validationJS.html')">validationJS.html
-                </div>
-                <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/DOMmethod.html')">DOMmethod.html</div>
-                <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validation_repeat1.js')">
-                    validation_repeat1.js
-                </div>
-                <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validation_repeat1.html')">
-                    validation_repeat1.html</div>
+<body
+    class="font-mono flex justify-center gap-3 min-h-screen text-[6px] md:text-[12px] lg:text-[20px] m-0 bg-black text-blue-600 p-0">
+    <div class="flex justify-center min-h-screen min-w-screen-1lg gap-2 mt-5 bg-blue-300 p-3 h-full">
+        <div class=" sidebar  rounded-tr-3xl bg-gray-900 flex-col gap-2 justify-stat items-start max-h-1lg ">
+            <div class="flex rounded-bl-full rounded-tr-full flex-row justify-center border-b-2 border-red-600  shadow-md shadow-red-500 bg-blue-950 ">
+                <h3
+                    class=" w-15 font-bold font-sans text-green-600 text-[20px] linke">
+                    FILES</h3>
             </div>
+            <div class="file-link" onclick="loadFile('CheckCode1.html')">📄 CodeWrite thisPage.html</div>
+            <div class="file-link" onclick="loadFile('index.html')">index.html</div>
+            <div class="file-link" onclick="loadFile('input.css')">input.css</div>
+            <div class="file-link" onclick="loadFile('output.css')">output.css</div>
+            <div class="file-link" onclick="loadFile('Itself_Code.html')">ItSelfCode.html</div>
+            <div class="file-link" onclick="loadFile('linkShowCode.html')">linkShowCode.html</div>
+            <div class="file-link" onclick="loadFile('jsYouTueCode.js')">jsYouTueCode.js</div>
+            <div class="file-link" onclick="loadFile('codeValidateFromYutube.html')">codeValidateFromYutube.html
+            </div>
+            <div class="file-link" onclick="loadFile('image.html')">🖼️ Image.html</div>
 
-            <div class="content bg-gray-100 rounded-lg p-5 max-h-1lg overflow-auto">
-                <h2 id="title">Select a file</h2>
+            <div class="folder-name">📁 PSPProject01</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/Project1.js')">Project1.js</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/gimin_ganerat.html')">gimin_ganerat.html</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/html01.html')">html01.html</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/html02.html')">html02.html</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/html03.html')">html03.html</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/html04.html')">html04.html</div>
+            <div class="file-link" onclick="loadFile('PSPProject01/Project1.html')">Project1.html</div>
+            <div class="folder-name">📁 JS_23-02-26_DOM-API</div>
+            <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/DOMmethod.js')">DOMmethod.js</div>
+            <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validationJS.html')">validationJS.html
+            </div>
+            <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/DOMmethod.html')">DOMmethod.html</div>
+            <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validation_repeat1.js')">
+                validation_repeat1.js
+            </div>
+            <div class="file-link" onclick="loadFile('JS_23-02-26_DOM-API/validation_repeat1.html')">
+                validation_repeat1.html</div>
+        </div>
+
+        <div class="content bg-gray-100 rounded-lg p-5 max-h-1lg overflow-auto">
+            <h2 id="title" class="border-b-2 border-blue-900 font-bold text-blue-700 font-serif border-l-2 border-l-red-600 shadow-xl shadow-blue-500/50 ">Select a file</h2>
+            <pre id="codeBox"
+                class="p-5 text-monospace text-red-800">Click a file on the left to read its real source code.</pre>
                 <hr>
-                <pre id="codeBox" class="p-5 text-monospace text-red-800">Click a file on the left to read its real source code.</pre>
-            </div>
+        </div>
     </div>
     <script>
         function loadFile(fileName) {
