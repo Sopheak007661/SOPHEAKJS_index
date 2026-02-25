@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation_repeat1</title>
+    <script src="validation_repeat1.js"></script>
+</head>
+<body>
+    <h1>Javascript validation repeat</h1>
+    <form  name="Myform" action="/action_page.php" method="post" onsubmit="return validate()">
+        <div>
+            <label for="email">Input:</label>
+            <input type="email" id="email" name="email1" required placeholder="input your email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password1" required placeholder="input your password">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
