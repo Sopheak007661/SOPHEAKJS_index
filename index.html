@@ -6,7 +6,34 @@
     <title>Main-logginfileCode</title>
     <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="../input.css">
-     <script src="PSPProject01/js.js"></script>
+     <script src="PSPProject01/js.js">
+
+     </script>
+     <script>
+          let col = 0;
+           let direction = 1;
+    window.onload = function(){
+        Do();
+    }
+    function Do(){
+ 
+        const elem = document.getElementById("animate");
+        setInterval(Fct,5);
+        function Fct(){
+            if(col >=180){
+                direction = -1;
+            }
+            else if(col <=0){
+                direction = 1;
+            }
+            col = col + direction;
+            elem.style.left = col + "px";
+             elem.style.right = col + "px";
+        }
+        
+
+    }
+     </script>
 </head>
 <body class="p-10 px-5 py-5 min-h-screen  bg-gradient-to-b from-gray-100 to-blue-900 flex flex-col items-center justify-center ">
     <nav class=" p-1  w-2md flex flex-col  justify-center items-center container max-auto">
@@ -14,12 +41,16 @@
         <div class="h-30 w-full flex justify-center border-b-4 border-b-blue-700">
             <h1 class="p-10 flex justify-center w-150 h-15 font-sans text-[15px] font-bold text-red-900 shadow-2xl shadow-blue-900 ">Welcome to Main Login File</h1>
                 </div>
-                    <h3 class="font-medium text-[[15px] text-blue-500 font-serif w-full">please click on the login button to check code on the PSP project Focus on JS Lesson</h3>
+                    <h3 class="font-medium text-[15px] text-blue-500 font-serif w-full">please click on the login button to check code on the PSP project Focus on JS Lesson</h3>
                       <form action="/action_page.php" method="post">
                         </form>  
-                            <a href="CheckCode1.html">
-                                <button class=" text-2xl p-5 bg-gray-600 font-mono text-blue-900 text-bold rounded-4xl" type="submit">Check File project</button>
+                        <div class=" w-full h-50  flex justify-center  items-start bg-blue-500">
+                            <div class="relative flex flex-col justify-center  w-80 h-20">
+                            <a href="CheckCode1.html" >
+                                <button class=" absolute w-50 h-30  text-2xl p-5 bg-gray-600 font-mono text-blue-900 text-bold rounded-4xl" type="submit" id="animate">Check File project</button>
                                 </a>  
+                                </div>
+                                </div>
                         </div>
                         <main class="flex justify-center items-center w-full h-150">
                        <ediv class="mt-20 image_indexFile  w-full h-full font-mono text-xl font-medium text-green-700 ">JSImage</ediv>
